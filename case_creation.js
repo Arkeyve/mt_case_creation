@@ -11,40 +11,54 @@ function myFunction() {
       document.getElementsByName('appModeCd')[0].value = 'WI';
       document.getElementsByName('firstName')[0].value = 'One';
       document.getElementsByName('lastName')[0].value = 'Test';
-      document.getElementById('button2').click();
+      setTimeout(function() {
+        document.getElementById('button2').click();
+      }, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Register Application - Address') {
       document.getElementById('Foreign').click();
-      document.getElementById('addressLine1Foreign').value = 'Line1';
-      document.getElementById('addressLine2Foreign').value = 'Line2';
-      document.getElementById('countryResidenceForeign').value = 'AF'
-      document.getElementById('form1dynaLocalSubmitButton').click();
-      if (document.getElementById('form1resultTable').children.length > 0) {
-        document.getElementById('actionButtonNext').click();
-      }
+      setTimeout(function() {
+        document.getElementById('addressLine1Foreign').value = 'Line1';
+        document.getElementById('addressLine2Foreign').value = 'Line2';
+        document.getElementById('countryResidenceForeign').value = 'AF'
+				setTimeout(function() {
+					document.getElementById('form1dynaLocalSubmitButton').click();
+					setTimeout(function() {
+						if (document.getElementById('form1resultTable').children.length > 0) {
+							document.getElementById('actionButtonNext').click();
+						}
+					}, 100);
+				}, 100);
+      }, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Register Individual - Individual') {
-      if (document.getElementById('firstName')[0].value === 'One') {
-        document.getElementById('gender').value = 'M';
-      } else {
-        document.getElementById('firstName')[0].value = "Two";
-        document.getElementById('lastName')[0].value = "Test";
-        document.getElementById('gender').value = 'F';
-      }
-      document.getElementById('monthdateOfBirth1').value = '09';
-      document.getElementById('datedateOfBirth1').value = '22';
-      document.getElementById('yeardateOfBirth1').value = '1985';
-      document.getElementById('ssn1ssn').value = Math.floor(Math.random() * 799 + 100);
-      document.getElementById('ssn2ssn').value = Math.floor(Math.random() * 99 + 10);
-      document.getElementById('ssn3ssn').value = Math.floor(Math.random() * 8999 + 1000);
-      if (document.getElementsByName('firstName')[0].value !== '') {
-        document.getElementById('actionButtonNext').click();
-      }
+			setTimeout(function() {
+				if (document.getElementById('firstName')[0].value === 'One') {
+					document.getElementById('gender').value = 'M';
+				} else {
+					document.getElementById('firstName')[0].value = "Two";
+					document.getElementById('lastName')[0].value = "Test";
+					document.getElementById('gender').value = 'F';
+				}
+				document.getElementById('monthdateOfBirth1').value = '09';
+				document.getElementById('datedateOfBirth1').value = '22';
+				document.getElementById('yeardateOfBirth1').value = '1985';
+				document.getElementById('ssn1ssn').value = Math.floor(Math.random() * 799 + 100);
+				document.getElementById('ssn2ssn').value = Math.floor(Math.random() * 99 + 10);
+				document.getElementById('ssn3ssn').value = Math.floor(Math.random() * 8999 + 1000);
+				setTimeout(function() {
+					if (document.getElementsByName('firstName')[0].value !== '') {
+						document.getElementById('actionButtonNext').click();
+					}
+				}, 100);
+			}, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'File Clearance - Results') {
       document.getElementById('viewAssociatedCases').value = 'N';
       document.getElementById('establishNewIndividual').value = 'Y';
-      document.getElementById('button2').click();
+			setTimeout(function() {
+				document.getElementById('button2').click();
+			}, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Register Individual - Summary') {
       document.getElementById('button4').click();
@@ -54,20 +68,24 @@ function myFunction() {
       document.getElementById('Medicaid').checked = true;
       document.getElementById('Cash').checked = true;
       document.getElementById('SNAP').checked = true;
-      document.getElementById('button4').click();
+			setTimeout(function() {
+				document.getElementById('button4').click();
+			}, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Register Program - Expedited Screening') {
       document.getElementById('expeditedCountableGrossIncome').value = '200';
-      //setTimeout(function() {
       document.getElementById('expeditedCountableResources').value = '200';
       document.getElementById('expeditedRentMortgage').value = '10';
       document.getElementById('expeditedMigrant').value = 'N';
-      //}, 10000);
-      document.getElementById('button3').click();
+			setTimeout(function() {
+				document.getElementById('button3').click();
+			}, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Register Application - Summary') {
       document.getElementById('workerAssignment').value = '500238';
-      document.getElementById('button3').click();
+			setTimeout(function() {
+				document.getElementById('button3').click();
+			}, 100);
     }
     if (document.getElementById('PRINTTITLE').innerHTML == 'Person Details') {
       document.getElementsByName('verifications')[0].value = 'HC';
